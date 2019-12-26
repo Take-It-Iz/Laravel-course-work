@@ -11,22 +11,22 @@
         <div class="form-group">
             @include("includes/input", [
                 'fieldId' => 'stud-name', 
-                'labelText' => 'Прізвище', 
-                'placeHolderText' => "Введіть ім'я", 
+                'labelText' => 'Ім\'я', 
+                'placeHolderText' => "Введіть нове ім'я", 
                 'fieldValue' => $student->name            
             ])
         </div>
-        <div class="form-group">
-            <label for="stud-group">Група</label>
+        {{-- <div class="form-group">
+            <label for="stud-group">Персонаж</label>
             <select class="browser-default custom-select" name="stud-group" id="stud-group">
-                <option selected disabled value="0">Оберіть групу</option>    
+                <option selected disabled value="0">Оберіть персонажа</option>    
                     @foreach($groups as $group)
                         <option @if($student->group->id == $group->id) selected @endif 
                             value="{{ $group->id }}">{{ $group->number }}</option>
                     @endforeach
             </select>
             @include('includes/validationErr', ['errFieldName' => "stud-group"])
-        </div>
+        </div> --}}
         <button type="submit" class="btn btn-primary float-right">
             Змінити
         </button>
