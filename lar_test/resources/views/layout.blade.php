@@ -46,9 +46,9 @@
                 <a class="nav-link" href="/">Головна</a>
                 <a class="nav-link" href="/groups">Персонажі</a>
                 <a class="nav-link" href="/group/0/students">Гравці</a>
-                @can('admin-panel')
+                {{-- @can('admin-panel')
                     <a class="nav-link" href="/admin">Адмін-панель</a>
-                @endcan
+                @endcan --}}
                 <a class="nav-link" href="/about">Про проект</a>
             </nav>
         </div>

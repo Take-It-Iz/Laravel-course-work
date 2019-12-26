@@ -28,7 +28,7 @@ class StudentsController extends Controller
 
         return view('students/index', [
             'students' => $students,
-            'pageTitle' => 'Студенти',
+            'pageTitle' => 'Гравці',
             'groups' => Group::all()->sortBy('name'),    
         ]);
     }

@@ -61,8 +61,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>   
     <script>
+
         $(document).ready(function () {
             $("#delete-student").click(function () {
                 var id = {!! $student->id !!};

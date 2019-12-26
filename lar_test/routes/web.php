@@ -13,10 +13,14 @@
 
 Route::resource('group/{grpid}/students', "StudentsController");
 Route::resource('groups', "GroupController");
+Route::resource('guns', "GunsController");
 Route::get('/', "PagesControler@home");
 Route::get('/about', "PagesControler@about");
 Route::get('/students/group/{id}', "StudentsController@index");
 Route::get('/admin', 'PagesControler@admin')->middleware('auth');
+Route::delete('/students/{id}', "StudentsController@destroy");
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::get('/students', "StudentsController@index");
 //Route::get('/students/create', "StudentsController@create");
@@ -25,7 +29,6 @@ Route::get('/admin', 'PagesControler@admin')->middleware('auth');
 //Route::get('/students/{id}', "StudentsController@show");
 //Route::patch('/students/{id}', "StudentsController@update");
 //Route::post('/students', "StudentsController@store");
-Route::delete('/students/{id}', "StudentsController@destroy");
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+

@@ -44,7 +44,7 @@ class GroupController extends Controller
 
     public function validateData($data) {
         return $this->validate($data, [
-            'number' => 'required|min:3|max:10',
+            'number' => 'required|min:3|max:30',
             'speciality' => ['required','max:100'],
             'student_id' => ['required',Rule::exists('students', 'id')]
         ], [
@@ -52,7 +52,7 @@ class GroupController extends Controller
             'speciality.max' => 'Довжина не має перевищувати 100 символів!',
             'number.required' => 'Номер групи не може бути порожнім!',
             'number.min' => 'Номер групи має бути не менше 3 символів!',
-            'number.max' => 'Номер групи має бути не більше 10 символів!',
+            'number.max' => 'Номер групи має бути не більше 30 символів!',
             'student_id.required' => 'Оберіть студента',
             'student_id.exists' => 'Ви обрали неіснуючого студента'
         ]);

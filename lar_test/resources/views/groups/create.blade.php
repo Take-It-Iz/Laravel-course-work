@@ -8,21 +8,21 @@
         {{ csrf_field() }}
         <div class="form-group">
             @include("includes/input", [
-                    'fieldId' => 'number', 'labelText' => 'Номер групи', 
-                    'placeHolderText' => 'Введіть номер'
+                    'fieldId' => 'number', 'labelText' => 'Ім\'я персонажа', 
+                    'placeHolderText' => 'Введіть ім\'я'
             ])
         </div>
         <div class="form-group">
             @include("includes/input", [
-                    'fieldId' => 'speciality', 'labelText' => 'Спеціальність', 
-                    'placeHolderText' => 'Назва спеціальності'
+                    'fieldId' => 'speciality', 'labelText' => 'Клас', 
+                    'placeHolderText' => 'Клас персонажа'
             ])   
         </div>
         <div class="form-group">
-        <label for="student">Староста групи</label>
+        <label for="student">Активний гравець</label>
             <select class="browser-default custom-select"
                    name="student_id" id="student">
-            <option selected disabled value="0">Оберіть студента</option>
+            <option selected disabled value="0">Оберіть гравця</option>
                     @foreach($students as $student)
                         <option value="{{ $student->id }}">{{ $student->name }}</option>
                     @endforeach                          
